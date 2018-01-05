@@ -13,8 +13,10 @@ end
 
 #=> "The line is currently: 1. Ada 2. Grace 3. Kent"
 def line(katz_deli)
+  puts katz_deli[0]
+  puts katz_deli.length
   line_string = "The line is currently: "
-  if [katz_deli].empty?
+  if [katz_deli].length  = 0
     line_string "The line is currently empty."
   else
     katz_deli.each_with_index do |name, index|
