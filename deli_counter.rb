@@ -19,7 +19,12 @@ def line(katz_deli)
     line_string = "The line is currently empty."
   else
     katz_deli.each_with_index do |name, index|
-       line_string << " #{index + 1}. #{name}"
+      if index = 1
+        line_string << "#{index + 1}. #{name}"
+      else
+        line_string << " #{index + 1}. #{name} "
+      end
+
     end
   end
   puts line_string
