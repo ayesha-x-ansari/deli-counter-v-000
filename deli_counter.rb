@@ -29,5 +29,6 @@ line(katz_deli)
 
 #=> "Currently serving Grace."
 def now_serving(katz_deli)
-  puts "Currently serving #{katz_deli[0]}."
-end
+  customer_bring_served = katz_deli.shif
+  puts "Currently serving #{customer_bring_served}."
+end 
