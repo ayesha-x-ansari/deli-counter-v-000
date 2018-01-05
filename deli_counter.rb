@@ -29,6 +29,6 @@ line(katz_deli)
 
 #=> "Currently serving Grace."
 def now_serving(katz_deli)
-  customer_bring_served = katz_deli.shif
+  customer_bring_served = katz_deli.shift
   puts "Currently serving #{customer_bring_served}."
 end
