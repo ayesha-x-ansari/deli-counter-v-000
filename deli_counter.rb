@@ -29,6 +29,10 @@ line(katz_deli)
 
 #=> "Currently serving Grace."
 def now_serving(katz_deli)
-  customer_bring_served = katz_deli.shift
-  puts "Currently serving #{customer_bring_served}."
+  if  katz_deli[0] == "" || katz_deli[0] == " "  || katz_deli[0] == nil
+    puts "There is nobody waiting to be served!"
+  else
+    customer_bring_served = katz_deli.shift
+    puts "Currently serving #{customer_bring_served}."
+  end
 end
