@@ -25,6 +25,6 @@ describe 'Deli Counter' do
       end
     end
   end
-
+end
 end
 end
