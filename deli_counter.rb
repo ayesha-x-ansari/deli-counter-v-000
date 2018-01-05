@@ -26,3 +26,8 @@ def line(katz_deli)
   puts line_string
 end
 line(katz_deli)
+
+#=> "Currently serving Grace."
+def now_serving(katz_deli)
+  puts "Currently serving #{katz_deli[0]}."
+end
