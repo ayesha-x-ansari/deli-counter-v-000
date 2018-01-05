@@ -13,6 +13,7 @@ describe 'Deli Counter' do
         line(katz_deli)
       end
     end
+
     context "there are people in line" do
       it "should display the current line" do
         expect($stdout).to receive(:puts).with("The line is currently: 1. Logan 2. Avi 3. Spencer")
@@ -24,7 +25,9 @@ describe 'Deli Counter' do
 	line(another_deli)
       end
     end
-    describe "#take_a_number" do
+  end
+
+  describe "#take_a_number" do
     context "there is nobody in line" do
       it "should add a person to the line" do
         expect($stdout).to receive(:puts).with("Welcome, Ada. You are number 1 in line.")
@@ -43,8 +46,31 @@ describe 'Deli Counter' do
       end
     end
 
-end
+    context "adding multiple people in a row" do
+      it "should correctly build the line" do
+        take_a_number(katz_deli, "Ada")
+        take_a_number(katz_deli, "Grace")
+        take_a_number(katz_deli, "Kent")
+        expect(katz_deli).to eq(%w(Ada Grace Kent))
+      end
+    end
+  end
 
+  describe "#now_serving" do
+    context "there are no people in line" do
+      it "should say that the line is empty" do
+        expect($stdout).to receive(:puts).with("There is nobody waiting to be served!")
+        now_serving(katz_deli)
+      end
+    end
 
-end
+    context "there are people in line" do
+      it "should serve the first person in line and remove them from the queue" do
+        expect($stdout).to receive(:puts).with("Currently serving Logan.")
+        now_serving(other_deli)
+        expect(other_deli).to eq(%w(Avi Spencer))
+      end
+    end
+  end
+
 end
