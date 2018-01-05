@@ -5,9 +5,10 @@ name = ""
 #=> Welcome, Ada. You are number 1 in line.
 def take_a_number(katz_deli, name)
   katz_deli << name
-  katz_deli.each_with_index do |name, index|
-     puts  "Welcome, #{name}. You are number #{index} in line."
-  end
+  
+#  katz_deli.each_with_index do |name, index|
+  puts  "Welcome, #{name}. You are number #{katz_deli.last} in line."
+#  end
 end
 #take_a_number(katz_deli, name)
 
