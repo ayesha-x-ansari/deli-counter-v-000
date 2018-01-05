@@ -24,7 +24,7 @@ describe 'Deli Counter' do
 	line(another_deli)
       end
     end
-  
+
 
 end
 end
