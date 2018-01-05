@@ -17,7 +17,7 @@ def line(katz_deli)
   puts katz_deli.length
   line_string = "The line is currently: "
   if  katz_deli[0] == "" || katz_deli[0] == " "  || katz_deli[0] == nil
-    line_string "The line is currently empty."
+    line_string = "The line is currently empty."
   else
     katz_deli.each_with_index do |name, index|
        line_string << "#{index + 1}. #{name} "
