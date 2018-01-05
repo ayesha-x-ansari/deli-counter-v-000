@@ -13,8 +13,7 @@ end
 
 #=> "The line is currently: 1. Ada 2. Grace 3. Kent"
 def line(katz_deli)
-  puts katz_deli[0]
-  puts katz_deli.length
+
   line_string = "The line is currently: "
   if  katz_deli[0] == "" || katz_deli[0] == " "  || katz_deli[0] == nil
     line_string = "The line is currently empty."
