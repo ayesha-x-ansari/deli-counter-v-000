@@ -31,4 +31,4 @@ line(katz_deli)
 def now_serving(katz_deli)
   customer_bring_served = katz_deli.shif
   puts "Currently serving #{customer_bring_served}."
-end 
+end
