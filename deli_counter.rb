@@ -23,6 +23,6 @@ def line(katz_deli)
        line_string << "#{index + 1}. #{name} "
     end
   end
-  puts  line_string
+  line_string
 end
 line(katz_deli)
